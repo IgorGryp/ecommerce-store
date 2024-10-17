@@ -1,6 +1,6 @@
 import React, { createContext, useState, useEffect } from 'react';
 
-// Create context
+// Create context object to share the products data globally across components
 export const ProductContext = createContext();
 
 const ProductProvider = ({ children }) => {
