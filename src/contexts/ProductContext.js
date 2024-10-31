@@ -13,8 +13,8 @@ const ProductProvider = ({ children }) => {
       const data = await response.json();
       setProducts(data);
     };
-    // Trigger the fetch when the component mounts
-    fetchProducts();
+
+    fetchProducts(); // Trigger the fetch when the component mounts
   }, []);
 
   return (
