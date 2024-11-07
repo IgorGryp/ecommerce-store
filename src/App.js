@@ -14,10 +14,13 @@ const App = () => {
     <div className="overflow-hidden">
       <Router>
         <Header />
+
         {/* Routes for different pages */}
         <Routes>
           <Route path="/" element={<Home />} />
+          {/* dynamic route to render the ProductDetails component  whenever the URL matches the pattern /product/:id */}
           <Route path="/product/:id" element={<ProductDetails />} />
+          ProductDetails component
         </Routes>
 
         <Sidebar />

@@ -1,3 +1,4 @@
+// This component Fetches products from an API, stores them in state, and provides the data.
 import React, { createContext, useState, useEffect } from 'react';
 
 export const ProductContext = createContext(); // create context object to share the products data globally across components

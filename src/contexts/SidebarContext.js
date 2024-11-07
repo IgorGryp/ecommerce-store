@@ -1,4 +1,5 @@
 import React, { useState, createContext } from 'react';
+import { ProductContext } from './ProductContext';
 
 export const SidebarContext = createContext();
 

@@ -7,8 +7,8 @@ import SidebarProvider from './contexts/SidebarContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  /* Wrap the App component (entire application) inside the Provider to give all components inside App access to the states through Context */
   <SidebarProvider>
-    {/* Wrap the App component (entire application) inside the ProductProvider to give all components inside App access to the products state through ProductContext */}
     <ProductProvider>
       <React.StrictMode>
         <App />

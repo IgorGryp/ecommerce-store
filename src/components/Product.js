@@ -1,14 +1,15 @@
-import React, { useContext } from 'react';
-import { Link } from 'react-router-dom'; // imprting link
-import { BsPlus, BsEyeFill } from 'react-icons/bs'; // imprting icons
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { BsPlus, BsEyeFill } from 'react-icons/bs'; // react icons
 
 const Product = ({ product }) => {
-  console.log(product);
+  /* console.log(product); */
 
   const { id, image, category, title, price } = product; // destructuring product
 
   return (
     <div>
+      {/* Product image */}
       <div className="border border-[#e4e4e4] h-[300px] mb-4 relative overflow-hidden group transition">
         <div className="flex items-center justify-center w-full h-full">
           <div className="w-[200px] mx-auto flex justify-center items-center">
@@ -19,7 +20,7 @@ const Product = ({ product }) => {
             />
           </div>
         </div>
-        {/* buttons */}
+        {/* Add & View buttons */}
         <div className="absolute flex flex-col items-center justify-center p-2 transition-all duration-300 opacity-0 -right-11 group-hover:right-5 top-6 group-hover:opacity-100 gap-y-2">
           <button>
             <div className="flex items-center justify-center w-12 h-12 text-white bg-red-500">
@@ -34,7 +35,7 @@ const Product = ({ product }) => {
           </Link>
         </div>
       </div>
-      {/* categoty & title & price */}
+      {/* Categoty & Title & Price */}
       <div>
         <div className="mb-1 text-sm text-gray-500 capitalize">{category}</div>
         <Link to={`/product/${id}`}>
