@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { BsPlus, BsEyeFill } from 'react-icons/bs'; // react icons
+// React icons
+import { BsPlus, BsEyeFill } from 'react-icons/bs';
+// Contexts
+import { CartContext } from '../contexts/CartContext';
 
 const Product = ({ product }) => {
-  /* console.log(product); */
+  const { addToCart } = useContext(CartContext);
 
   const { id, image, category, title, price } = product; // destructuring product
 
@@ -22,7 +25,7 @@ const Product = ({ product }) => {
         </div>
         {/* Add & View buttons */}
         <div className="absolute flex flex-col items-center justify-center p-2 transition-all duration-300 opacity-0 -right-11 group-hover:right-5 top-6 group-hover:opacity-100 gap-y-2">
-          <button>
+          <button onClick={() => addToCart(product, id)}>
             <div className="flex items-center justify-center w-12 h-12 text-white bg-red-500">
               <BsPlus className="text-3xl" />
             </div>
