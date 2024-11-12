@@ -3,6 +3,7 @@ import React, { createContext, useState } from 'react';
 export const CartContext = createContext();
 
 const CartProvider = ({ children }) => {
+  // Cart state
   const [cart, setCart] = useState([]);
 
   // Add to cart
@@ -62,10 +63,10 @@ const CartProvider = ({ children }) => {
         }
       });
       setCart(newCart);
-    } else {
-      if (cartItem.amount < 2) {
-        removeFromCart(id);
-      }
+    }
+
+    if (cartItem.amount < 2) {
+      removeFromCart(id);
     }
   };
 

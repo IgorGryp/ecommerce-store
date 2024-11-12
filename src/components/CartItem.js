@@ -52,7 +52,7 @@ const CartItem = ({ item }) => {
               {/* plus icon */}
               <div
                 onClick={() => increaseAmount(id)}
-                className='flex items-center justify-center flex-1 h-full cursor-pointer'
+                className='flex items-center justify-center flex-1 h-full cursor-pointer '
               >
                 <IoMdAdd />
               </div>
