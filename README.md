@@ -23,3 +23,13 @@ Summary of how useContext works:
 2. Provider Component: Use the context's Provider component to make the state or value available to all child components. The Provider wraps around the parts of the app where the state should be accessible.
 
 3. Consume: In child components, use the useContext hook to access the context value. Child components re-renders automatically when the state changes.
+
+########
+
+Original styles for products window and scroll. The heigh for large screnns is set to lg:h-[640px] but it couse issues on my laptop screen.
+
+<div className='flex flex-col gap-y-2 h-[520px] lg:h-[640px] overflow-y-auto overflow-x-hidden border-b'>
+        {cart.map((item) => {
+          return <CartItem item={item} key={item.id} />;
+        })}
+      </div>
