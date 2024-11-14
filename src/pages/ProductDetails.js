@@ -1,39 +1,59 @@
 import React, { useContext } from 'react';
 import { useParams } from 'react-router-dom';
+// Contexts
 import { ProductContext } from '../contexts/ProductContext';
+import { CartContext } from '../contexts/CartContext';
 
 // Component for individual product details
 // Checks URL parameter and renders the corresponding product
 const ProductDetails = () => {
-  const { id } = useParams(); // Get the id parameter from the URL
-  const productsContext = useContext(ProductContext);
+  const { id } = useParams(); // Get the product id parameter from the URL
+  const { products } = useContext(ProductContext);
+  const { addToCart } = useContext(CartContext);
 
-  // Check if productsContext contains the products array
-  const products =
-    productsContext && Array.isArray(productsContext.products) ? productsContext.products : null;
+  const product = products.find((item) => item.id === Number(id)); // Get the single product that matches the id
 
-  // Check if products is available and is an array
+  // If products is not found
   if (!products) {
-    return <p>Loading...</p>;
+    return (
+      <section className='flex items-center justify-center h-screen'>
+        Loading...
+      </section>
+    );
   }
 
-  console.log(products);
-
-  const selectedProduct = products.find((p) => p.id === Number(id)); // Find the product that matches the id
-
-  // If the product is not found, handle it
-  if (!selectedProduct) {
-    return <p>Product not found</p>;
-  }
-
-  console.log(id);
+  // Destructure product
+  const { title, price, description, image } = product;
 
   return (
-    <>
-      <div>Product Details Page</div>
-      <p>Product ID: {id}</p>
-      <div>{selectedProduct.title}</div>
-    </>
+    <section className='flex items-center h-screen pt-32 pb-12 lg:py-32'>
+      <div className='container mx-auto'>
+        {/* Image and text wrapper */}
+        <div className='flex flex-col items-center lg:flex-row'>
+          {/* Image */}
+          <div className='flex items-center justify-center flex-1 mb-8 lg:mb-0'>
+            <img className='max-w-[200px] lg:max-w-sm' src={image} alt='' />
+          </div>
+
+          {/* Text */}
+          <div className='flex-1 text-center lg:text-left'>
+            <h1 className='text-[26px] font-medium mb-2 max-w-[450px] mx-auto lg:mx-0'>
+              {title}
+            </h1>
+            <div className='mb-6 text-xl font-medium text-red-500'>
+              $ {price}
+            </div>
+            <p className='mb-8'>{description}</p>
+            <button
+              onClick={() => addToCart(product, product.id)}
+              className='px-8 py-4 text-white bg-primary'
+            >
+              Add to cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 

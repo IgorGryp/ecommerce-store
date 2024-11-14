@@ -5,7 +5,7 @@ import WomanImg from '../img/woman_hero.png';
 
 const Hero = () => {
   return (
-    <section className='bg-pink-200 h-[800px] bg-hero bg-no-repeat bg-cover bg-center py-24'>
+    <section className='h-[800px] bg-hero bg-no-repeat bg-cover bg-center py-24'>
       <div className='container flex justify-around h-full mx-auto'>
         {/* Text */}
         <div className='flex flex-col justify-center'>
