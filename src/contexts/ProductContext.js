@@ -21,7 +21,9 @@ const ProductProvider = ({ children }) => {
   return (
     // Providing the products data to the whole app through ProductContext
     // By wrapping {children} with the ProductContext.Provider, you ensure that any component inside ProductProvider (i.e., App and all its children) has access to the context value (data)
-    <ProductContext.Provider value={{ products }}>{children}</ProductContext.Provider>
+    <ProductContext.Provider value={{ products }}>
+      {children}
+    </ProductContext.Provider>
   );
 };
 

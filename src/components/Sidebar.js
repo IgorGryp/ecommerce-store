@@ -1,3 +1,4 @@
+// This component shows the cart contents, total and checkout options.
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 // React icons

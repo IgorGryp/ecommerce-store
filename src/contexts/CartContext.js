@@ -1,17 +1,14 @@
+// This component manages the cart’s state, such as items in the cart, total cost, and item quantity.
 import React, { createContext, useEffect, useState } from 'react';
 
 export const CartContext = createContext();
 
 const CartProvider = ({ children }) => {
-  // Cart state
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState([]); // State for cart items
+  const [itemAmount, setItemAmount] = useState(0); // State for total item count
+  const [total, setTotal] = useState(0); // State for total cost
 
-  // Item amount state
-  const [itemAmount, setItemAmount] = useState(0);
-  // Total price state
-  const [total, setTotal] = useState(0);
-
-  // Calculate total price
+  // Calculate and update total cost when cart changes
   useEffect(() => {
     const total = cart.reduce(
       (accumulator, currentItem) =>
@@ -21,7 +18,7 @@ const CartProvider = ({ children }) => {
     setTotal(total);
   }, [cart]);
 
-  // Update item amount
+  // Update item count when cart changes
   useEffect(() => {
     if (cart) {
       const amount = cart.reduce(
@@ -95,6 +92,7 @@ const CartProvider = ({ children }) => {
       removeFromCart(id);
     }
   };
+  console.log(cart);
 
   return (
     <CartContext.Provider

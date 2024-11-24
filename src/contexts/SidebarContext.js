@@ -1,5 +1,5 @@
+// Manages the sidebar’s open/close state.
 import React, { useState, createContext } from 'react';
-import { ProductContext } from './ProductContext';
 
 export const SidebarContext = createContext();
 
