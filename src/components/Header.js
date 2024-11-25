@@ -39,7 +39,7 @@ const Header = () => {
         isActive ? 'bg-white py-4 shadow-md' : 'bg-none py-6'
       } fixed w-full z-10 transition-all`}
     >
-      <div className='container flex items-center justify-between h-full mx-auto'>
+      <div className='container flex items-center justify-between h-full mx-auto sm:pl-6'>
         {/* Logo Section */}
         <Link to={'/'}>
           <div>
@@ -49,12 +49,12 @@ const Header = () => {
         {/* Cart Icon Section */}
         <div
           onClick={() => setIsOpen(!isOpen)}
-          className='relative flex cursor-pointer'
+          className='relative flex cursor-pointer sm:pr-6'
         >
           {/* Shopping Bag Icon */}
           <BsBag className='text-2xl' />
           {/* Cart Item Count Badge */}
-          <div className='absolute bg-red-500 -right-2 -bottom-2 text-[12px] w-[18px] h-[18px] text-white rounded-full flex justify-center items-center'>
+          <div className='absolute bg-red-500 sm:right-4 -right-2 -bottom-2 text-[12px] w-[18px] h-[18px] text-white rounded-full flex justify-center items-center'>
             {itemAmount} {/* Displays the total number of items in the cart */}
           </div>
         </div>
