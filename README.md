@@ -95,6 +95,7 @@ The project has a modular structure, organized into distinct files for better ma
 ## Known issues (Work in progress)
 
 Original styles for products window and scroll in the cart. The heigh for large screnns is set to lg:h-[640px] but it couse issues on my laptop screen.
+Difault size was set to h-[520px]
 
 useEffect(() => {
 window.addEventListener('scroll', () => {

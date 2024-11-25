@@ -1,5 +1,5 @@
-// The Home component represents the homepage of the e-commerce application.
-// It renders the product list, filtering to specific categories (men’s and women’s clothing).
+// The Home component represents the homepage of the e-commerce application
+// It renders the product list, filtering to specific categories (men’s and women’s clothing)
 import React, { useContext } from 'react';
 // Product context to access product data
 import { ProductContext } from '../contexts/ProductContext';

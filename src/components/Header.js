@@ -1,5 +1,4 @@
-// This component displays the logo and cart icon with item count, and changes appearance when scrolling
-// Component to display the website header
+// This component displays the website header with logo and cart icon with item count, and changes appearance when scrolling
 import React, { useContext, useEffect, useState } from 'react';
 // Contexts
 import { SidebarContext } from '../contexts/SidebarContext';

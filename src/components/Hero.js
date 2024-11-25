@@ -1,4 +1,4 @@
-// The Hero component renders a promotional banner with a message and an image.
+// The Hero component renders a promotional banner with a message and an image
 import React from 'react';
 import { Link } from 'react-router-dom';
 // Images
