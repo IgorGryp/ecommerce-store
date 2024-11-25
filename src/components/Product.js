@@ -26,7 +26,7 @@ const Product = ({ product }) => {
           </div>
         </div>
         {/* Action Buttons (Add to Cart & View Details) */}
-        <div className='absolute flex flex-col items-center justify-center p-2 transition-all duration-300 opacity-0 -right-11 group-hover:right-5 top-6 group-hover:opacity-100 gap-y-2'>
+        <div className='absolute flex flex-col items-center justify-center p-2 transition-all duration-300 opacity-0 -right-11 group-hover:right-2 top-2 group-hover:opacity-100 gap-y-2'>
           {/* Add to Cart Button */}
           <button onClick={() => addToCart(product, id)}>
             <div className='flex items-center justify-center w-12 h-12 text-white bg-red-500'>
