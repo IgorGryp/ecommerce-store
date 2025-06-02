@@ -20,7 +20,7 @@ const Hero = () => {
           <h1 className='text-[70px] leading-[1.1] font-light'>
             AUTUMN COLLECTION
           </h1>
-          {/* Subtitle */}
+          {/* Subheading */}
           <p className='mb-8 text-2xl font-semibold text-gray-600'>
             EFFORTLESS STYLE INSPIRED BY THE SEASON
           </p>
