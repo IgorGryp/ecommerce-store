@@ -18,9 +18,12 @@ const Hero = () => {
           </div>
           {/* Title */}
           <h1 className='text-[70px] leading-[1.1] font-light'>
-            AUTUMN SALE STYLISH <br />
-            <span className='font-semibold'>WOMENS</span>
+            AUTUMN COLLECTION
           </h1>
+          {/* Subtitle */}
+          <p className='mb-8 text-2xl font-semibold text-gray-600'>
+            EFFORTLESS STYLE INSPIRED BY THE SEASON
+          </p>
           {/* Call-to-Action Button: Link to discover more */}
           <Link
             to={'/'}
